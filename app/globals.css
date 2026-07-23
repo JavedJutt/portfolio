@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-grotesk), var(--font-inter), ui-sans-serif, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-zinc-50 text-zinc-800 antialiased dark:bg-[#0a0a0c] dark:text-zinc-300;
+}
+
+::selection {
+  @apply bg-emerald-400/30;
+}
+
+/* ── Section reveal animation ─────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ── Hero background: subtle grid + radial glow ───────────── */
+.hero-bg {
+  background-image:
+    radial-gradient(ellipse 80% 55% at 50% -10%, rgba(16, 185, 129, 0.13), transparent),
+    linear-gradient(to right, rgba(120, 120, 130, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(120, 120, 130, 0.07) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    44px 44px,
+    44px 44px;
+  mask-image: linear-gradient(to bottom, black 62%, transparent 100%);
+}
+
+/* ── Typography helpers ───────────────────────────────────── */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* ── Card hover lift ──────────────────────────────────────── */
+.card-lift {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+}
