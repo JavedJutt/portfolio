@@ -22,8 +22,14 @@ export default function Hero() {
           </h1>
         </Reveal>
 
+        <Reveal delay={120}>
+          <p className="font-display mt-5 text-lg font-semibold text-zinc-800 sm:text-xl dark:text-zinc-200">
+            {site.role}
+          </p>
+        </Reveal>
+
         <Reveal delay={160}>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-600 sm:text-xl dark:text-zinc-400">
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-zinc-600 sm:text-xl dark:text-zinc-400">
             {site.subheadline}
           </p>
         </Reveal>
