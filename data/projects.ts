@@ -18,6 +18,8 @@ export type Project = {
   impact: string;
   /** Short metric badge, e.g. "hours → 40s" */
   metric?: string;
+  /** Optional screenshot (16:9) shown below the title. Path under /public. */
+  image?: string;
   stack: string[];
   links: ProjectLink[];
   featured?: boolean;
@@ -39,6 +41,7 @@ export const projects: Project[] = [
     title: "AI Executive Co-pilot (“AI CEO”)",
     category: "AI Agents & RAG",
     tagline: "A virtual chief-of-staff that never forgets a meeting, message, or email.",
+    image: "/images/case-studies/ai-ceo.png",
     problem:
       "A scaling e-commerce company's CEO was drowning in information scattered across Slack, Gmail, meeting transcripts, and AI note-takers. Decisions slowed because nobody could find what had already been discussed or agreed.",
     solution:
@@ -56,6 +59,7 @@ export const projects: Project[] = [
     title: "Patient Journey — AI Assistant for Doctors",
     category: "AI Agents & RAG",
     tagline: "Real-time diagnostic support for Brazil's medical community.",
+    image: "/images/case-studies/patient-journey.png",
     problem:
       "Doctors needed fast, reliable support analysing patient health patterns during consultations — without wading through records or generic search results.",
     solution:
@@ -65,15 +69,32 @@ export const projects: Project[] = [
     metric: "500k+ practitioners",
     stack: ["GPT-4", "LangChain", "Pinecone", "RAG", "React", "Python", "PostgreSQL", "Stripe", "Docker"],
     links: [
-      { label: "Live app", href: "https://patientjourneyapp.ttrials.com" },
+      { label: "Client: ttrials.com", href: "https://ttrials.com" },
       { label: "Case study on Upwork", href: "https://www.upwork.com/freelancers/~01477a1c34b6991107?p=2038590110703808512" },
     ],
+    featured: true,
+  },
+  {
+    title: "SyncFounder — Startup Workspace",
+    category: "SaaS Products",
+    tagline: "A startup-native workspace for early-stage founders — built end-to-end.",
+    image: "/images/case-studies/syncfounder.png",
+    problem:
+      "Early-stage founders juggle Notion, Slack, and Trello to manage strategy, tasks, and team — losing momentum in the gaps between disconnected tools.",
+    solution:
+      "A complete SaaS product I built end-to-end: strategic roadmaps with structured startup stages, kanban task management, a centralized startup playbook, team collaboration, subscriptions, and SyncAI — a context-aware assistant that understands each startup's situation.",
+    impact:
+      "A live, revenue-ready product (free + $14/mo Pro tier) taken from concept through design, development, and deployment — the full lifecycle in one pair of hands.",
+    metric: "Full product, end-to-end",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI Assistant", "Stripe", "Vercel"],
+    links: [{ label: "Visit syncfounder.com", href: "https://syncfounder.com" }],
     featured: true,
   },
   {
     title: "Letter of Credit Analyzer",
     category: "Document AI",
     tagline: "Trade-finance document review, compressed from hours to seconds.",
+    image: "/images/case-studies/lc-analyzer.png",
     problem:
       "Letter of Credit reviews were slow, manual, and error-prone: comparing instruction documents against customer drafts line by line, with costly consequences for missed discrepancies.",
     solution:
@@ -91,6 +112,7 @@ export const projects: Project[] = [
     title: "Certificate PDF Data Extractor",
     category: "Document AI",
     tagline: "Messy inspection certificates in, clean spreadsheets out.",
+    image: "/images/case-studies/pdf-extractor.png",
     problem:
       "Export inspection certificates arrived as unstructured PDFs with wildly varying layouts, inconsistent units, and moisture-basis variations — turning data entry into hours of error-prone manual work per batch.",
     solution:
@@ -107,6 +129,7 @@ export const projects: Project[] = [
     title: "EpiWriting — Healthcare Data Analysis AI",
     category: "Data & Analytics",
     tagline: "Clinical-grade analytics over millions of fragmented records.",
+    image: "/images/case-studies/epiwriting.png",
     problem:
       "A healthcare client needed insights from millions of fragmented Excel records. Traditional RAG retrieval failed them: missing data, inaccurate aggregations, and charts too unreliable for clinical analysis.",
     solution:
@@ -123,6 +146,7 @@ export const projects: Project[] = [
     title: "AI Regulatory Reporting Engine",
     category: "Document AI",
     tagline: "Sustainability compliance mapping at machine speed.",
+    image: "/images/case-studies/regulatory.png",
     problem:
       "The client relied on a slow, manual process to evaluate how Voluntary Sustainability Standards align with new regulations like CS3D and EUDR — weeks of analysis with a constant risk of inconsistency.",
     solution:
@@ -139,12 +163,13 @@ export const projects: Project[] = [
     title: "Hebrew Speech-to-Text — Fine-Tuned Whisper",
     category: "Speech & Voice AI",
     tagline: "Custom ASR where off-the-shelf models fail.",
+    image: "/images/case-studies/hebrew-stt.png",
     problem:
       "Bilingual Hebrew-English sermons defeated every standard transcription tool — constant code-switching and cultural nuance produced unusable transcripts.",
     solution:
       "A transcription and summarization system built on a Whisper model fine-tuned on 10+ hours of custom audio, with a word-level timestamp API, LLM-based transcript refinement, Celery task queues, and GPU training/inference infrastructure.",
     impact:
-      "500% reduction in Word Error Rate and 800% reduction in Character Error Rate versus baseline, turning sermons into accurate transcripts and concise English summaries.",
+      "5x lower Word Error Rate (WER) and 8x lower Character Error Rate (CER) versus baseline, turning sermons into accurate transcripts and concise English summaries.",
     metric: "5× lower WER",
     stack: ["OpenAI Whisper", "Fine-tuning", "Hugging Face", "Python", "Celery", "FastAPI", "Docker", "GPU Infrastructure"],
     links: [
@@ -155,6 +180,7 @@ export const projects: Project[] = [
     title: "Gotackle — AI Business Advisory Platform",
     category: "SaaS Products",
     tagline: "Connecting business owners with advisors — minus the admin overload.",
+    image: "/images/case-studies/gotackle.png",
     problem:
       "Business owners and advisors wasted the hours that should have gone into strategy on administrative workload, slowing economic-development projects to a crawl.",
     solution:
@@ -165,20 +191,5 @@ export const projects: Project[] = [
     links: [
       { label: "Case study on Upwork", href: "https://www.upwork.com/freelancers/~01477a1c34b6991107?p=2032413461217333248" },
     ],
-  },
-  {
-    title: "SyncFounder — Startup Workspace",
-    category: "SaaS Products",
-    tagline: "A startup-native workspace for early-stage founders — built end-to-end.",
-    problem:
-      "Early-stage founders juggle Notion, Slack, and Trello to manage strategy, tasks, and team — losing momentum in the gaps between disconnected tools.",
-    solution:
-      "A complete SaaS product I built end-to-end: strategic roadmaps with structured startup stages, kanban task management, a centralized startup playbook, team collaboration, subscriptions, and SyncAI — a context-aware assistant that understands each startup's situation.",
-    impact:
-      "A live, revenue-ready product (free + $14/mo Pro tier) taken from concept through design, development, and deployment — the full lifecycle in one pair of hands.",
-    metric: "Full product, end-to-end",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI Assistant", "Stripe", "Vercel"],
-    links: [{ label: "Visit syncfounder.com", href: "https://syncfounder.com" }],
-    featured: true,
   },
 ];

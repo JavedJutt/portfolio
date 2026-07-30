@@ -1,9 +1,39 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { categories, projects } from "@/data/projects";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+
+// Case-study screenshot with a graceful fallback while the real
+// image file hasn't been dropped into /public/images/case-studies yet.
+function CardImage({ src, title }: { src: string; title: string }) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return (
+      <div className="mt-5 flex aspect-video items-center justify-center rounded-xl border border-dashed border-zinc-300 bg-zinc-100/60 dark:border-zinc-700 dark:bg-zinc-800/40">
+        <span className="text-xs font-medium tracking-wide text-zinc-400 uppercase dark:text-zinc-500">
+          Screenshot coming soon
+        </span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative mt-5 aspect-video overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+      <Image
+        src={src}
+        alt={`${title} — screenshot`}
+        fill
+        sizes="(min-width: 768px) 50vw, 100vw"
+        className="object-cover"
+        onError={() => setFailed(true)}
+      />
+    </div>
+  );
+}
 
 export default function Projects() {
   const [active, setActive] = useState<(typeof categories)[number]>("All");
@@ -60,6 +90,8 @@ export default function Projects() {
               </div>
 
               <p className="mt-2 text-sm font-medium text-zinc-500 italic dark:text-zinc-400">{p.tagline}</p>
+
+              {p.image && <CardImage src={p.image} title={p.title} />}
 
               <dl className="mt-5 space-y-4 text-sm leading-relaxed">
                 <div>
