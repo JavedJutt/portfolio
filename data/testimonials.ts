@@ -1,11 +1,11 @@
 // ─────────────────────────────────────────────────────────────
-// Reviews 1–2: real client reviews quoted from the public
-// Upwork work history of the Mergestack agency (client names
-// are not public on Upwork). "[They]" marks a neutral editorial
+// Real client reviews, quoted from the public Upwork work
+// history of the Mergestack agency (client names are not
+// public on Upwork). "[They]" marks a neutral editorial
 // substitution — the rest is verbatim.
 //
-// Reviews 3–4: PLACEHOLDERS — replace [BRACKETED] text with
-// real quotes (e.g. ask the SyncFounder founder for one).
+// Source: https://www.upwork.com/agencies/~018eb6e26cacde09d8
+// To add more, append entries here — quote, author, role.
 // ─────────────────────────────────────────────────────────────
 
 export type Testimonial = {
@@ -27,17 +27,5 @@ export const testimonials: Testimonial[] = [
     quote: "It has been incredible working with Ahmad, I would suggest him and his team to anyone.",
     author: "Upwork client — ★ 5.0",
     role: "Next.js Platform Migration · 244 hours",
-  },
-  {
-    quote:
-      "[ADD REAL QUOTE — ask a SyncFounder stakeholder, e.g. about how you led the full-stack platform and GenAI chatbot build while mentoring a team of junior developers]",
-    author: "[NAME]",
-    role: "[TITLE], SyncFounder",
-    project: "SyncFounder — Startup Workspace",
-  },
-  {
-    quote: "[ADD REAL QUOTE — paste another client review here]",
-    author: "[NAME]",
-    role: "[TITLE, COMPANY]",
   },
 ];

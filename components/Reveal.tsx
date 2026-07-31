@@ -4,8 +4,9 @@ import { useEffect, useRef, type ReactNode } from "react";
 
 /**
  * Wraps children in a container that fades/slides in when scrolled
- * into view. Purely presentational; respects prefers-reduced-motion
- * via CSS (see globals.css).
+ * into view. Elements already on screen at mount reveal immediately,
+ * so nothing above the fold ever sits at reduced opacity waiting for
+ * a scroll event. Respects prefers-reduced-motion via CSS.
  */
 export default function Reveal({
   children,
@@ -21,16 +22,32 @@ export default function Reveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    const show = () => el.classList.add("is-visible");
+
+    // Already (even partially) within the viewport: reveal right away.
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      show();
+      return;
+    }
+
+    if (typeof IntersectionObserver === "undefined") {
+      show();
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            el.classList.add("is-visible");
+            show();
             observer.unobserve(el);
           }
         });
       },
-      { threshold: 0.12 },
+      // Low threshold: start revealing as soon as the element edges in,
+      // so tall blocks never linger half-faded.
+      { threshold: 0.05 },
     );
     observer.observe(el);
     return () => observer.disconnect();

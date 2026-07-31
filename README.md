@@ -28,13 +28,10 @@ All content lives in `data/`:
 | `data/skills.ts` | Skill groups and tags |
 | `data/testimonials.ts` | Testimonial cards (empty = shows Upwork-reviews fallback) |
 
-## ⚠️ Placeholders to review before going live
+## Optional improvements
 
-1. **`data/site.ts` → `url`** — currently `https://javed.dev`. Set your real domain (used in SEO/OG tags).
-2. **`data/site.ts` → `formspreeEndpoint`** — empty. Without it the contact form opens the visitor's email client (works, but less smooth). Create a free form at formspree.io and paste the endpoint for direct submission.
-3. **`data/site.ts` → `stats`** — "50+ systems", "500k+ users", "8 industries" are taken from your Upwork bio and project claims. Confirm you're comfortable publishing them.
-4. **`data/testimonials.ts`** — empty by design (no invented quotes). Paste real Upwork review snippets here.
-5. **Project copy** in `data/projects.ts` — written from your Upwork case studies and repo analysis. Skim for client-confidentiality issues (e.g. the "AI CEO" description).
+1. **`data/site.ts` → `formspreeEndpoint`** — empty. Without it the contact form opens the visitor's email client (works, but less smooth). Create a free form at formspree.io and paste the endpoint for direct submission.
+2. **`data/testimonials.ts`** — currently holds the two real public Upwork (agency) reviews. Append more real quotes as you collect them (e.g. from SyncFounder stakeholders).
 
 ## Structure
 

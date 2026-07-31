@@ -16,8 +16,8 @@ export const site = {
   whatsappLink: "https://wa.me/923096263073",
   calendarLink: "https://calendar.app.google/2hJutgD9mFHW9nHY6",
 
-  // Set this to your deployed URL before going live (used for SEO/OG tags).
-  url: "https://javed.dev", // PLACEHOLDER — replace with your real domain
+  // Deployed URL (used for SEO/OG tags).
+  url: "https://www.javedahmad.com",
 
   links: {
     upwork: "https://www.upwork.com/freelancers/~01477a1c34b6991107",
