@@ -18,13 +18,13 @@ export const testimonials: Testimonial[] = [
   {
     quote:
       "He demonstrated strong expertise in LLM file processing, prompt engineering and application deployment. This was our first AI pilot project which automates a rather complicated workflow which requires both extensive business knowledge and technical implementation. He supported us throughout the process and worked closely with us. Thank you very much again.",
-    author: "Upwork client — ★ 5.0",
+    author: "Upwork client · ★ 5.0",
     role: "AI Multi-Level Regulatory Reporting · MVP",
     project: "AI Regulatory Reporting Engine",
   },
   {
     quote: "It has been incredible working with Ahmad, I would suggest him and his team to anyone.",
-    author: "Upwork client — ★ 5.0",
+    author: "Upwork client · ★ 5.0",
     role: "Next.js Platform Migration · 244 hours",
   },
 ];

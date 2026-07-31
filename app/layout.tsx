@@ -6,9 +6,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const grotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-grotesk" });
 
-const title = `${site.name} — AI & Automation Engineer | Full-Stack Developer`;
+const title = `${site.name} · AI & Automation Engineer · Full-Stack Developer`;
 const description =
-  "Freelance AI & automation engineer and full-stack developer. I turn manual, repetitive work into production-grade AI systems — RAG, AI agents, LangChain, Next.js — delivered end-to-end from architecture to deployment.";
+  "Freelance AI & automation engineer and full-stack developer. I turn manual, repetitive work into production-grade AI systems (RAG, AI agents, LangChain, Next.js), delivered end-to-end from architecture to deployment.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description,
-  applicationName: `${site.name} — Portfolio`,
+  applicationName: `${site.name} Portfolio`,
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
   publisher: site.name,
@@ -117,7 +117,7 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       "@id": `${site.url}/#service`,
-      name: `${site.name} — AI, Automation & Full-Stack Engineering`,
+      name: `${site.name} · AI, Automation & Full-Stack Engineering`,
       description,
       url: site.url,
       image: `${site.url}/opengraph-image`,

@@ -25,7 +25,7 @@ function CardImage({ src, title }: { src: string; title: string }) {
     <div className="relative mt-5 aspect-video overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
       <Image
         src={src}
-        alt={`${title} — screenshot`}
+        alt={`${title} screenshot`}
         fill
         sizes="(min-width: 768px) 50vw, 100vw"
         className="object-cover"
@@ -47,7 +47,7 @@ export default function Projects() {
           <SectionHeading
             eyebrow="AI & automation projects"
             title="Real problems. Measured outcomes."
-            intro="Every project below shipped to production for a real client — AI agents, RAG systems, document AI, and full-stack SaaS. Framed the way I approach them: the problem, what I built, and what changed."
+            intro="Every project below shipped to production for a real client, spanning AI agents, RAG systems, document AI, and full-stack SaaS. Framed the way I approach them: the problem, what I built, and what changed."
           />
         </Reveal>
 

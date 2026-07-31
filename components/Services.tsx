@@ -10,7 +10,7 @@ export default function Services() {
           <SectionHeading
             eyebrow="How I work"
             title="One engagement. The complete lifecycle."
-            intro="Most freelancers hand you code. I hand you a live product. Every project moves through the same four stages — so you always know where things stand and there's never a gap someone else has to fill."
+            intro="Most freelancers hand you code. I hand you a live product. Every project moves through the same four stages, so you always know where things stand and there's never a gap someone else has to fill."
           />
         </Reveal>
 

@@ -45,7 +45,7 @@ export const projects: Project[] = [
     problem:
       "A scaling e-commerce company's CEO was drowning in information scattered across Slack, Gmail, meeting transcripts, and AI note-takers. Decisions slowed because nobody could find what had already been discussed or agreed.",
     solution:
-      "A multi-layered Agentic RAG system that continuously ingests Slack, Gmail, Fellow & Limitless AI transcripts, and Airtable into a unified vector knowledge base — with n8n automation agents for Google Drive and email, scheduled watchdog agents that analyse meetings daily, and Slack-delivered executive briefs.",
+      "A multi-layered Agentic RAG system that continuously ingests Slack, Gmail, Fellow & Limitless AI transcripts, and Airtable into a unified vector knowledge base, with n8n automation agents for Google Drive and email, scheduled watchdog agents that analyse meetings daily, and Slack-delivered executive briefs.",
     impact:
       "Executives retrieve any decision, commitment, or context in seconds instead of digging through four tools. Daily automated briefs keep leadership aligned without a single manual report.",
     metric: "4 data silos → 1 brain",
@@ -61,11 +61,11 @@ export const projects: Project[] = [
     tagline: "Real-time diagnostic support for Brazil's medical community.",
     image: "/images/case-studies/patient-journey.png",
     problem:
-      "Doctors needed fast, reliable support analysing patient health patterns during consultations — without wading through records or generic search results.",
+      "Doctors needed fast, reliable support analysing patient health patterns during consultations, without wading through records or generic search results.",
     solution:
       "An AI-powered assistant that analyses patient health patterns and provides diagnostic support and treatment recommendations in real time, built on RAG with fine-tuned models, Pinecone vector search, and LangChain-orchestrated workflows behind a custom React interface with voice and image input.",
     impact:
-      "Launched to a platform serving over half a million Brazilian practitioners — production healthcare AI, not a demo.",
+      "Launched to a platform serving over half a million Brazilian practitioners. Production healthcare AI, not a demo.",
     metric: "500k+ practitioners",
     stack: ["GPT-4", "LangChain", "Pinecone", "RAG", "React", "Python", "PostgreSQL", "Stripe", "Docker"],
     links: [
@@ -77,14 +77,14 @@ export const projects: Project[] = [
   {
     title: "SyncFounder — Startup Workspace",
     category: "SaaS Products",
-    tagline: "A startup-native workspace for early-stage founders — built end-to-end.",
+    tagline: "A startup-native workspace for early-stage founders, built end-to-end.",
     image: "/images/case-studies/syncfounder.png",
     problem:
-      "Early-stage founders juggle Notion, Slack, and Trello to manage strategy, tasks, and team — losing momentum in the gaps between disconnected tools.",
+      "Early-stage founders juggle Notion, Slack, and Trello to manage strategy, tasks, and team, losing momentum in the gaps between disconnected tools.",
     solution:
-      "A complete SaaS product I built end-to-end: strategic roadmaps with structured startup stages, kanban task management, a centralized startup playbook, team collaboration, subscriptions, and SyncAI — a context-aware assistant that understands each startup's situation.",
+      "A complete SaaS product I built end-to-end: strategic roadmaps with structured startup stages, kanban task management, a centralized startup playbook, team collaboration, subscriptions, and SyncAI, a context-aware assistant that understands each startup's situation.",
     impact:
-      "A live, revenue-ready product (free + $14/mo Pro tier) taken from concept through design, development, and deployment — the full lifecycle in one pair of hands.",
+      "A live, revenue-ready product (free + $14/mo Pro tier) taken from concept through design, development, and deployment: the full lifecycle in one pair of hands.",
     metric: "Full product, end-to-end",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI Assistant", "Stripe", "Vercel"],
     links: [{ label: "Visit syncfounder.com", href: "https://syncfounder.com" }],
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     problem:
       "Letter of Credit reviews were slow, manual, and error-prone: comparing instruction documents against customer drafts line by line, with costly consequences for missed discrepancies.",
     solution:
-      "An AI analyzer that parses instruction documents and drafts, extracts key data, and intelligently compares them — handling format mismatches and partial variations, flagging discrepancies, missing fields, and unauthorized entries, and simplifying complex clauses.",
+      "An AI analyzer that parses instruction documents and drafts, extracts key data, and intelligently compares them, handling format mismatches and partial variations, flagging discrepancies, missing fields, and unauthorized entries, and simplifying complex clauses.",
     impact:
       "Review time dropped from hours to roughly 40 seconds per document set, with human intervention on track to fall below 5%.",
     metric: "Hours → ~40 seconds",
@@ -114,9 +114,9 @@ export const projects: Project[] = [
     tagline: "Messy inspection certificates in, clean spreadsheets out.",
     image: "/images/case-studies/pdf-extractor.png",
     problem:
-      "Export inspection certificates arrived as unstructured PDFs with wildly varying layouts, inconsistent units, and moisture-basis variations — turning data entry into hours of error-prone manual work per batch.",
+      "Export inspection certificates arrived as unstructured PDFs with wildly varying layouts, inconsistent units, and moisture-basis variations, turning data entry into hours of error-prone manual work per batch.",
     solution:
-      "A Python pipeline combining PyPDF2 extraction with GPT-4o structured prompts, normalization logic, and retry mechanisms — built to survive batch processing and API rate limits in production.",
+      "A Python pipeline combining PyPDF2 extraction with GPT-4o structured prompts, normalization logic, and retry mechanisms, built to survive batch processing and API rate limits in production.",
     impact:
       "Fully automated conversion into standardized CSV output; manual effort reduced from hours to minutes with analysis-ready data every time.",
     metric: "Hours → minutes",
@@ -133,9 +133,9 @@ export const projects: Project[] = [
     problem:
       "A healthcare client needed insights from millions of fragmented Excel records. Traditional RAG retrieval failed them: missing data, inaccurate aggregations, and charts too unreliable for clinical analysis.",
     solution:
-      "A code-first AI model using OpenAI Code Interpreter to run real Python-based filtering, cohort analysis, statistics, and visualizations with deterministic prompts — plus a FastAPI/Prisma backend with user profiles and disease-data administration.",
+      "A code-first AI model using OpenAI Code Interpreter to run real Python-based filtering, cohort analysis, statistics, and visualizations with deterministic prompts. It's backed by a FastAPI/Prisma system with user profiles and disease-data administration.",
     impact:
-      "100% data fidelity, accurate time-series analytics, automated insight generation — and the manual BI workload eliminated entirely.",
+      "100% data fidelity, accurate time-series analytics, automated insight generation, and the manual BI workload eliminated entirely.",
     metric: "100% data fidelity",
     stack: ["OpenAI Code Interpreter", "Python", "Chainlit", "Supabase", "FastAPI", "Prisma", "PostgreSQL"],
     links: [
@@ -148,7 +148,7 @@ export const projects: Project[] = [
     tagline: "Sustainability compliance mapping at machine speed.",
     image: "/images/case-studies/regulatory.png",
     problem:
-      "The client relied on a slow, manual process to evaluate how Voluntary Sustainability Standards align with new regulations like CS3D and EUDR — weeks of analysis with a constant risk of inconsistency.",
+      "The client relied on a slow, manual process to evaluate how Voluntary Sustainability Standards align with new regulations like CS3D and EUDR: weeks of analysis with a constant risk of inconsistency.",
     solution:
       "An AI regulatory mapping engine that parses standards and legislation documents, auto-identifies supporting evidence via RAG, classifies compliance alignment with LLMs, and generates Excel results plus professional summary reports.",
     impact:
@@ -165,7 +165,7 @@ export const projects: Project[] = [
     tagline: "Custom ASR where off-the-shelf models fail.",
     image: "/images/case-studies/hebrew-stt.png",
     problem:
-      "Bilingual Hebrew-English sermons defeated every standard transcription tool — constant code-switching and cultural nuance produced unusable transcripts.",
+      "Bilingual Hebrew-English sermons defeated every standard transcription tool. Constant code-switching and cultural nuance produced unusable transcripts.",
     solution:
       "A transcription and summarization system built on a Whisper model fine-tuned on 10+ hours of custom audio, with a word-level timestamp API, LLM-based transcript refinement, Celery task queues, and GPU training/inference infrastructure.",
     impact:
@@ -179,12 +179,12 @@ export const projects: Project[] = [
   {
     title: "Gotackle — AI Business Advisory Platform",
     category: "SaaS Products",
-    tagline: "Connecting business owners with advisors — minus the admin overload.",
+    tagline: "Connecting business owners with advisors, minus the admin overload.",
     image: "/images/case-studies/gotackle.png",
     problem:
       "Business owners and advisors wasted the hours that should have gone into strategy on administrative workload, slowing economic-development projects to a crawl.",
     solution:
-      "An AI platform that connects owners and advisors and uses AI analytics to measure the impact of growth strategies and shape new ones — replacing scattered admin with a single collaborative workspace.",
+      "An AI platform that connects owners and advisors and uses AI analytics to measure the impact of growth strategies and shape new ones, replacing scattered admin with a single collaborative workspace.",
     impact:
       "Owners and advisors analyse strategy impact with AI instead of spreadsheets, freeing their time for the strategic work that actually grows the business.",
     stack: ["Python", "OpenAI", "React", "AI Analytics", "Full-Stack Development"],

@@ -3,7 +3,7 @@ import { site } from "@/data/site";
 
 // Auto-attached as og:image / twitter:image. Generated at build/runtime as a
 // 1200×630 PNG — no binary asset to maintain, and it stays in sync with `site`.
-export const alt = `${site.name} — AI & Automation Engineer, Full-Stack Developer`;
+export const alt = `${site.name} · AI & Automation Engineer · Full-Stack Developer`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -27,7 +27,7 @@ export default function Image() {
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <div style={{ width: 18, height: 18, borderRadius: 9999, background: "#10b981" }} />
           <div style={{ color: "#a1a1aa", fontSize: 26 }}>
-            Available for freelance projects — remote, worldwide
+            Available for freelance projects · remote, worldwide
           </div>
         </div>
 
@@ -39,7 +39,7 @@ export default function Image() {
             AI &amp; Automation Engineer · Full-Stack Developer
           </div>
           <div style={{ color: "#d4d4d8", fontSize: 30, marginTop: 26, maxWidth: 940, lineHeight: 1.3 }}>
-            I turn manual, repetitive work into production-grade AI systems — from architecture to deployment.
+            I turn manual, repetitive work into production-grade AI systems, from architecture to deployment.
           </div>
         </div>
 

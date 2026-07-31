@@ -9,7 +9,7 @@ export const site = {
   role: "Full-Stack & AI Engineer · Automation Specialist",
   headline: "I turn manual, repetitive operations into AI systems that run themselves.",
   subheadline:
-    "For startups and corporates that are tired of spreadsheets, copy-paste workflows, and half-finished deliverables. I take your idea from planning and architecture to a live, production-ready product — full-stack development, AI & automation, DevOps, and deployment included.",
+    "For startups and corporates that are tired of spreadsheets, copy-paste workflows, and half-finished deliverables. I take your idea from planning and architecture to a live, production-ready product: full-stack development, AI & automation, DevOps, and deployment included.",
   location: "Lahore, Pakistan",
   email: "javaedjutt33@gmail.com",
   whatsapp: "+92 309 6263073",

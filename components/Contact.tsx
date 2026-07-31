@@ -131,7 +131,7 @@ export default function Contact() {
               </button>
               {status === "sent" && (
                 <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
-                  Thanks — your message is on its way. I usually reply within 24 hours.
+                  Thanks, your message is on its way. I usually reply within 24 hours.
                 </p>
               )}
               {status === "error" && (

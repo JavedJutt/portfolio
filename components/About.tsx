@@ -5,15 +5,15 @@ import SectionHeading from "./SectionHeading";
 const points = [
   {
     title: "Built for business outcomes",
-    text: "Every system I ship exists to save time or make money — automating document review from hours to seconds, unifying scattered company knowledge, or replacing manual data entry entirely.",
+    text: "Every system I ship exists to save time or make money: automating document review from hours to seconds, unifying scattered company knowledge, or replacing manual data entry entirely.",
   },
   {
     title: "One engineer, whole lifecycle",
-    text: "Planning, architecture, development, CI/CD, cloud, go-live. You won't need a second freelancer to \"finish\" what I hand over — the deliverable is a running production system.",
+    text: "Planning, architecture, development, CI/CD, cloud, go-live. You won't need a second freelancer to \"finish\" what I hand over. The deliverable is a running production system.",
   },
   {
     title: "Real production mileage",
-    text: "My work is live in healthcare (500k+ practitioners), trade finance, sustainability compliance, e-commerce operations, and SaaS — not toy demos.",
+    text: "My work is live in healthcare (500k+ practitioners), trade finance, sustainability compliance, e-commerce operations, and SaaS, not toy demos.",
   },
 ];
 
@@ -24,8 +24,8 @@ export default function About() {
         <Reveal>
           <SectionHeading
             eyebrow="About"
-            title="Systems that move your business forward — not just code."
-            intro={`I'm ${site.name}, a full-stack and AI engineer with 5+ years of experience and 50+ production-grade systems delivered for startups and growing companies. I specialise in AI automation, RAG systems, and AI agents — and I work directly with clients worldwide.`}
+            title="Systems that move your business forward, not just code."
+            intro={`I'm ${site.name}, a full-stack and AI engineer with 5+ years of experience and 50+ production-grade systems delivered for startups and growing companies. I specialise in AI automation, RAG systems, and AI agents, and I work directly with clients worldwide.`}
           />
         </Reveal>
 
@@ -43,7 +43,7 @@ export default function About() {
         <Reveal delay={120}>
           <p className="mt-12 max-w-3xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
             If your team is copy-pasting between tools, reviewing documents by hand, or sitting on data nobody can
-            query — that&apos;s exactly the kind of problem I remove. I&apos;ll tell you honestly where AI helps, where
+            query, that&apos;s exactly the kind of problem I remove. I&apos;ll tell you honestly where AI helps, where
             plain automation is cheaper, and what it takes to run either in production.
           </p>
         </Reveal>
