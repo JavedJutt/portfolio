@@ -50,7 +50,18 @@ body {
 }
 
 /* ── Hero background: subtle grid + radial glow ───────────── */
+/* The fade mask lives on a ::before layer behind the content so it
+   only fades the decorative background — not the headline, buttons,
+   or stats sitting on top of it. */
 .hero-bg {
+  position: relative;
+}
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
   background-image:
     radial-gradient(ellipse 80% 55% at 50% -10%, rgba(16, 185, 129, 0.13), transparent),
     linear-gradient(to right, rgba(120, 120, 130, 0.07) 1px, transparent 1px),
@@ -60,6 +71,10 @@ body {
     44px 44px,
     44px 44px;
   mask-image: linear-gradient(to bottom, black 62%, transparent 100%);
+}
+.hero-bg > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* ── Typography helpers ───────────────────────────────────── */
